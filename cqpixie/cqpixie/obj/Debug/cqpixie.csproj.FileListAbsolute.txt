@@ -1,0 +1,90 @@
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\csc.exe
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\System.Collections.Immutable.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\System.Reflection.Metadata.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\vbc.exe
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\VBCSCompiler.exe
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\roslyn\VBCSCompiler.exe.config
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.dll.config
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.pdb
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.SqlServer.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.Web.Infrastructure.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\MySql.Data.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\MySql.Data.Entity.EF6.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\Newtonsoft.Json.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Net.Http.Formatting.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Helpers.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.WebHost.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Razor.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Deployment.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Razor.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.SqlServer.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\Newtonsoft.Json.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Net.Http.Formatting.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Helpers.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.WebHost.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Razor.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Deployment.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Razor.xml
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.dll
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.pdb
+C:\YCM\MY WORK\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.csprojResolveAssemblyReference.cache
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\csc.exe
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\System.Collections.Immutable.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\System.Reflection.Metadata.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\vbc.exe
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\VBCSCompiler.exe
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\roslyn\VBCSCompiler.exe.config
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.dll.config
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\cqpixie.pdb
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.SqlServer.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.Web.Infrastructure.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\MySql.Data.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\MySql.Data.Entity.EF6.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\Newtonsoft.Json.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Net.Http.Formatting.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Helpers.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.WebHost.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Razor.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Deployment.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Razor.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\EntityFramework.SqlServer.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\Newtonsoft.Json.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Net.Http.Formatting.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Helpers.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Http.WebHost.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.Razor.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Deployment.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\bin\System.Web.WebPages.Razor.xml
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.csprojResolveAssemblyReference.cache
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.dll
+C:\YCM\Projects\cqpixie2017\cqpixie\cqpixie\obj\Debug\cqpixie.pdb

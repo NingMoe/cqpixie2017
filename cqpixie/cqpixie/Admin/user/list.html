@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>后台管理</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables/jquery.dataTables.css">
+ 
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <span id="includeheader"></span>
+
+  <span id="includeaside"></span>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        用户管理
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+
+      <div class="my-modal">
+        <div class="modal" style="display:none">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Default Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-primary" id="btnConfirmDel">删除</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </div>
+      <!-- /.my-modal -->
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">用户列表</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="myTable" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>用户名</th>
+                  <th>密码</th>
+                  <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <span id="includefooter"></span>
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- Added by Donald -->
+<script src="../ClientSideInclude.js" language="JavaScript"></script>
+
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="../plugins/datatables/jquery.dataTables.js"></script>
+
+<!-- TableGenerator.js-->
+<script type="text/javascript" src="../common/TableGenerator.js"></script>
+
+<!-- HttpHelper.js-->
+<script type="text/javascript" src="../common/HttpHelper.js"></script>
+<script src="../common/CheckLogin.js" language="JavaScript"></script>
+<script>
+
+$(document).ready(function(){
+  checkLogin();
+  clientSideInclude("includefooter", "../footer.html");
+  clientSideInclude("includeheader","../header.html");
+  clientSideInclude("includeaside","../aside.html");
+
+  // Generate and config table
+  var columns = [
+      { "data": "username" },
+      { "data": "password" },
+      { 
+        "render": function(data, type, row, meta){
+          var btnEdit = "<button id='btnEdit_"+row.id+"'>编辑</button>";
+          var btnDel =  "<button id='btnDel_"+row.id+"'>删除</button>";
+          return btnEdit + btnDel;
+        }
+      }
+  ];
+
+  //bind table, third parameter is the pagesize
+  $("#myTable").DataTable(getTable("getusers",columns,10));
+
+  //bind Edit buttons
+  $("#myTable").on("click","button[id^='btnEdit']",function(){
+    // alert($(this).attr("id"));
+    location.href = "./edit.html?id="+$(this).attr("id").split("_")[1];
+  });
+
+
+  //bind Delete buttons
+  $("#myTable").on("click","button[id^='btnDel']",function(){
+    var id = $(this).attr("id").split("_")[1];
+    var txt = $(this).parents("tr")[0].children[0].innerText;
+    $(".modal-title").html("请确认");
+    $(".modal-content p").html("您真的要删除用户 - "+txt);
+    $(".modal").modal("show");
+    //bind btnConfirmDel button
+    $("#btnConfirmDel").unbind(); //remove previous binded event
+    $("#btnConfirmDel").click(function(){
+      var param = {"id":id};
+      HttpHelper.httpAjax("deleteuser",param,function(ret){
+        if(ret!=-1){
+          $("#myTable").DataTable().ajax.reload();
+          $(".modal").modal("hide");
+        }
+      });
+    });
+  }); 
+});
+
+</script>
+</body>
+</html>

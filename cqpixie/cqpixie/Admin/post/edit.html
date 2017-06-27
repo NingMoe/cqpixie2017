@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>后台管理</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" type="text/css" href="../plugins/datatables/jquery.dataTables.css">
+ 
+
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <span id="includeheader"></span>
+
+  <span id="includeaside"></span>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        产品管理
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+
+      <div class="my-modal">
+        <div class="modal" style="display:none">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Default Modal</h4>
+              </div>
+              <div class="modal-body">
+                <p>One fine body&hellip;</p>
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-primary" id="btnClose">关闭</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+      </div>
+      <!-- /.my-modal -->
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title" id="subtitle">编辑产品</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="title">产品名称</label>
+                  <input type="text" class="form-control" id="title" required="true" maxlength="50" placeholder="产品名称">
+                </div>
+                <div class="form-group">
+                  <label for="imgurl">产品图片</label>
+                  <input type="text" class="form-control" id="imgurl" required="true"  placeholder="产品图片url">
+
+                  <a id="browse" class="btn">选择文件</a>
+                  <a id="start_upload" class="btn">开始上传</a>
+
+                </div> 
+                <div class="form-group">
+                <label for="imgurl">产品图片预览</label>
+                  <br/><img id="imgpreview" height="50">             
+                </div>
+                <div class="form-group">
+                  <label for="content">产品描述</label>
+                  <div class="box box-info">
+                    <div class="box-header">
+                      <h3 class="box-title">
+                        <small></small>
+                      </h3>
+                      <!-- tools box -->
+                      <div class="pull-right box-tools">
+                        <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                          <i class="fa fa-minus"></i></button>
+                      </div>
+                      <!-- /. tools -->
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body pad">
+
+                      <textarea id="content" name="content" rows="10" cols="80">
+                                             
+                      </textarea>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>产品分类</label>
+                  <select class="form-control" id="categories">
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>产品功能</label>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>保护足趾</label>                
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>防刺穿</label>                
+                    </label>
+                  </div>     
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>防静电</label>
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>电绝缘</label>                      
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>耐油</label>                      
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>耐酸碱</label>                      
+                    </label>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>防寒</label>
+                    </label>
+                  </div>  
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>耐高温</label>
+                    </label>
+                  </div>  
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"><label>导电</label>
+                    </label>
+                  </div>  
+                  <input type="text" class="hidden" id="tags">
+                </div>              
+              </div>
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary" id="btnSubmit">提交</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <span id="includefooter"></span>
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- Added by Donald -->
+<script src="../ClientSideInclude.js" language="JavaScript"></script>
+
+<!-- jQuery 2.2.3 -->
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script>
+
+<!-- CK Editor -->
+<script src="../plugins/ckeditor/ckeditor.js"></script>
+
+<!-- plupload -->
+<script type="text/javascript" src="../../PlugIn/plupload-2.3.1/js/plupload.full.min.js"></script>
+
+<!-- TableGenerator.js-->
+<script type="text/javascript" src="../common/TableGenerator.js"></script>
+
+<!-- HttpHelper.js-->
+<script type="text/javascript" src="../common/HttpHelper.js"></script>
+<script src="../common/CheckLogin.js" language="JavaScript"></script>
+<script>
+
+$(document).ready(function(){
+  checkLogin();
+  clientSideInclude("includefooter", "../footer.html");
+  clientSideInclude("includeheader","../header.html");
+  clientSideInclude("includeaside","../aside.html");
+
+  CKEDITOR.replace('content');
+
+  $("#imgurl").blur(function(){
+      var src = $("#imgurl").val();
+      $("#imgpreview").attr("src",src);
+      var str = "<a href='"+ src + "' target=_blank ></a>";
+      $("#imgpreview").wrapAll(str);    
+  });
+
+  $(":checkbox").click(function(){
+    var str="";
+    $("input[type='checkbox']:checked").each(function(){
+     str += $(this).next().text() + ",";
+    });
+    str = str.substring(0,str.length-1);
+    $("#tags").val(str);
+  });
+
+  //plupload start
+      //实例化一个plupload上传对象
+    var uploader = new plupload.Uploader({
+        browse_button : 'browse', //触发文件选择对话框的按钮，为那个元素id
+        url : '../../Common/PlugIn/Uploader.ashx', //服务器端的上传页面地址
+        flash_swf_url: '../../PlugIn/plupload-2.3.1/js/Moxie.swf', //swf文件，当需要使用swf方式进行上传时需要配置该参数
+        silverlight_xap_url: '../../PlugIn/plupload-2.3.1/js/Moxie.xap' //silverlight文件，当需要使用silverlight方式进行上传时需要配置该参数
+    });    
+
+    //在实例对象上调用init()方法进行初始化
+    uploader.init();
+
+    //绑定各种事件，并在事件监听函数中做你想做的事
+    uploader.bind('FileUploaded', function (uploader, file, responseObject) {
+        // alert(responseObject.response);
+        $("#imgurl").val(responseObject.response);
+        $("#imgpreview").attr("src",responseObject.response);
+        var str = "<a href='"+responseObject.response + "' target=_blank ></a>";
+        $("#imgpreview").wrapAll(str);
+    });
+
+    uploader.bind('FilesAdded', function (uploader, files) {
+        // alert(files[0].name);
+    });
+
+    //最后给"开始上传"按钮注册事件
+    document.getElementById('start_upload').onclick = function(){
+        uploader.start(); //调用实例对象的start()方法开始上传文件，当然你也可以在其他地方调用该方法
+    }
+//plupload end
+
+  // bind category dropdownlist
+  HttpHelper.httpAjax("getcategories",{},function(ret){
+    var obj = JSON.parse(ret).DataList;
+    for(var i=0;i<obj.length;i++){
+      $("#categories").append("<option value='"+obj[i].id+"'>"+obj[i].categoryname+"</option>");
+    }
+  });
+
+  // read value from server to fill out form
+  var id = HttpHelper.httpGetValueInUrl(location.href,"id");
+
+  if(id!=""){
+    var param = {
+      "id":id
+    };
+    HttpHelper.httpAjax("getpost",param,function(ret){
+      var obj = JSON.parse(ret);
+      $("#title").val(obj.title);
+      $("#content").val(obj.content);
+      $("#imgurl").val(obj.imgurl);
+      $("#imgpreview").attr("src",obj.imgurl);
+      var str = "<a href='"+obj.imgurl + "' target=_blank ></a>";
+      $("#imgpreview").wrapAll(str);
+      $("#categories").val(obj.categoryid);
+      $("#tags").val(obj.tags);
+      var tags = obj.tags;
+      tagsAry = tags.split(",");
+      $("input[type='checkbox']").each(function(){
+       // if$(this).next().text() + ",";
+       for(var i=0;i<tagsAry.length;i++){
+        if($(this).next().text()==tagsAry[i]){
+          $(this).attr("checked","true");
+        }
+       }
+      });
+    });
+  }
+
+  console.log("id="+id);
+
+  $("#btnClose").click(function(){
+    $(".modal").modal("hide");
+  });
+
+  //submit form
+  $("form").submit(function(e){
+    e.preventDefault();
+    var action = "addpost";
+    if(id!=""){
+      action = "updatepost";
+    }
+    // set content field to CKEDITOR's content
+    $("#content").val(CKEDITOR.instances.content.getData());
+    var param = {
+      "id":id,
+      "title":$("#title").val(),
+      "content":$("#content").val(),
+      "imgurl":$("#imgurl").val(),
+      "categoryid":$("#categories").val(),
+      "tags":$("#tags").val()
+    };
+    HttpHelper.httpAjax(action,param,function(ret){
+      if(ret!=-1){
+        $(".modal-title").html("成功");
+        $(".modal-content p").html("产品 - "+ $("#title").val() + " 编辑成功！");
+      }
+      else{
+        $(".modal-title").html("失败");
+        $(".modal-content p").html("产品 - "+ $("#title").val() + " 编辑失败！");      
+      }
+      $(".modal").modal("show");
+    });
+  });
+
+});
+
+</script>
+</body>
+</html>

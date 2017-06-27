@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cqpixieModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="cqpixieEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="posts" EntityType="cqpixieModel.post" />
+    <EntitySet Name="pages" EntityType="cqpixieModel.page" />
+    <EntitySet Name="categories" EntityType="cqpixieModel.category" />
+    <EntitySet Name="users" EntityType="cqpixieModel.user" />
+  </EntityContainer>
+  <EntityType Name="post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="editor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" />
+    <Property Name="imgurl" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="categoryid" Type="Int32" Nullable="false" />
+    <Property Name="tags" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="page">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="content" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="editor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" />
+    <Property Name="imgurl" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryname" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+    <Property Name="editor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="editor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="editdate" Type="DateTime" />
+  </EntityType>
+</Schema>
