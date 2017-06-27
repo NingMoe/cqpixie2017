@@ -125,13 +125,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\aside.html" />
+    <Content Include="Admin\category\edit.html" />
+    <Content Include="Admin\category\list.html" />
+    <Content Include="Admin\category\list_sample_code.html" />
     <Content Include="Admin\ClientSideInclude.js" />
+    <Content Include="Admin\common\CheckLogin.js" />
+    <Content Include="Admin\common\HttpHelper.js" />
+    <Content Include="Admin\common\TableGenerator.js" />
+    <Content Include="Admin\footer.html" />
     <Content Include="Admin\Gruntfile.js" />
+    <Content Include="Admin\header.html" />
     <Content Include="Admin\index - Copy.html" />
     <Content Include="Admin\index.html" />
     <Content Include="Admin\index2.html" />
     <Content Include="Admin\login.aspx" />
+    <Content Include="Admin\page\edit.html" />
+    <Content Include="Admin\page\list.html" />
+    <Content Include="Admin\post\edit.html" />
+    <Content Include="Admin\post\list.html" />
     <Content Include="Admin\starter.html" />
+    <Content Include="Admin\user\edit.html" />
+    <Content Include="Admin\user\list.html" />
     <Content Include="detail.aspx" />
     <Content Include="footer.aspx" />
     <Content Include="header.aspx" />
@@ -328,9 +343,11 @@
     <Compile Include="BLL\Implementation\CategoryManager.cs" />
     <Compile Include="BLL\Implementation\PageManager.cs" />
     <Compile Include="BLL\Implementation\PostManager.cs" />
+    <Compile Include="BLL\Implementation\UserManager.cs" />
     <Compile Include="BLL\Interface\ICategoryManager.cs" />
     <Compile Include="BLL\Interface\IPageManager.cs" />
     <Compile Include="BLL\Interface\IPostManager.cs" />
+    <Compile Include="BLL\Interface\IUserManager.cs" />
     <Compile Include="Common\DynamicQuery\ExpressionVisitor.cs" />
     <Compile Include="Common\DynamicQuery\IQueryBuilder.cs" />
     <Compile Include="Common\Extensions\ExpressionExtension.cs" />
@@ -404,6 +421,9 @@
       <DependentUpon>CQPiXie.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\post.cs">
+      <DependentUpon>CQPiXie.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\user.cs">
       <DependentUpon>CQPiXie.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

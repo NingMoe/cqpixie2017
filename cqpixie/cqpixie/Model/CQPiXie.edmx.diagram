@@ -8,7 +8,7 @@
         <EntityTypeShape EntityType="cqpixieModel.post" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="cqpixieModel.page" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="cqpixieModel.category" Width="1.5" PointX="6.75" PointY="0.875" />
-        <EntityTypeShape EntityType="cqpixieModel.user" Width="1.5" PointX="4.875" PointY="0.75" />
+        <EntityTypeShape EntityType="cqpixieModel.user" Width="1.5" PointX="5" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
