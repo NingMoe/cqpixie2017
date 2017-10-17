@@ -53,7 +53,7 @@ body {
                 <td height="40" background="images/spbpxc_r12_c25.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td width="2%">&nbsp;</td>
-                      <td width="98%"><div align="left"><img name="spbpxc_r23_c12" src="images/spbpxc_r23_c12.jpg" width="177" height="14" border="0" id="spbpxc_r23_c12" alt="" /></div></td>
+                      <td width="98%"><div align="left"><a href="certificatelist.aspx"><img name="spbpxc_r23_c12" src="images/spbpxc_r23_c12.jpg" width="177" height="14" border="0" id="spbpxc_r23_c12" alt="" /></a></div></td>
                     </tr>
                 </table></td>
               </tr>

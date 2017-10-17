@@ -147,6 +147,7 @@
     <Content Include="Admin\starter.html" />
     <Content Include="Admin\user\edit.html" />
     <Content Include="Admin\user\list.html" />
+    <Content Include="certificatelist.aspx" />
     <Content Include="detail.aspx" />
     <Content Include="footer.aspx" />
     <Content Include="header.aspx" />
@@ -348,6 +349,13 @@
     <Compile Include="BLL\Interface\IPageManager.cs" />
     <Compile Include="BLL\Interface\IPostManager.cs" />
     <Compile Include="BLL\Interface\IUserManager.cs" />
+    <Compile Include="certificatelist.aspx.cs">
+      <DependentUpon>certificatelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="certificatelist.aspx.designer.cs">
+      <DependentUpon>certificatelist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\DynamicQuery\ExpressionVisitor.cs" />
     <Compile Include="Common\DynamicQuery\IQueryBuilder.cs" />
     <Compile Include="Common\Extensions\ExpressionExtension.cs" />

@@ -1,0 +1,7 @@
+url in Admin>common>CheckLogin.js needs to be configured properly
+
+url in Admin>common>HttpHelper.js needs to be configured properly
+
+url in Admin>category\list_sample_code.html needs to be configured properly
+
+url in Admin>common>TableGenerator.js needs to be configured properly

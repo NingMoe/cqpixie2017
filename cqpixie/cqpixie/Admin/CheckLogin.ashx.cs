@@ -14,7 +14,7 @@ namespace cqpixie.Admin
         public void ProcessRequest(HttpContext context)
         {
             string username = context.Request["username"];
-            if(username !="")
+            if(username !="" && username!=null)
             {
                 context.Response.Write("OK");
             }

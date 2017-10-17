@@ -54,19 +54,19 @@ namespace cqpixie
         {
             string htmlPics = "<tr>";
             string htmlNames = "<tr>";
-            string titles = ConfigurationManager.AppSettings["certificatesforhomepage"];
+            string titles = "营业执照,生产许可证,安全标志证书";
             string[] arytitle = titles.Split(',');
             PageData pd;
             PageManager pm = new PageManager();
-            for(int i = 0; i < arytitle.Length; i++)
+            for(int i = 0; i < 3; i++)
             {
                 pd = new PageData()
                 {
                     title = arytitle[i]
                 };
                 page p = pm.GetPage(pd);
-                htmlPics += "<td width=\"154\"><a href=\"detail.aspx?type=page&id="+p.id+"\"><img src=\"" + p.imgurl + "\" width=\"154\" height=\"188\" border=\"0\"/></a></td>";
-                htmlNames += "<td height=\"25\"><a href=\"detail.aspx?type=page&id="+p.id+"\"><div align=\"center\" class=\"h_h12\">" + p.title + "</div></a></td>";
+                htmlPics += "<td width=\"154\"><a href=\"detail.aspx?type=page&title="+p.title+"\"><img src=\"" + p.imgurl + "\" width=\"154\" height=\"188\" border=\"0\"/></a></td>";
+                htmlNames += "<td height=\"25\"><a href=\"detail.aspx?type=page&title="+p.title+"\"><div align=\"center\" class=\"h_h12\">" + p.title + "</div></a></td>";
 
             }
             htmlPics += "</tr>";
